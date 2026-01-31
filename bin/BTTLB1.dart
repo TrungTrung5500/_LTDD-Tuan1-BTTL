@@ -1,7 +1,6 @@
 import 'dart:io';
 
 void main() {
-  // --- BÀI TẬP 1: TÍNH TIỀN MUA KEM ---
 
   // 1. Nhập số lượng
   stdout.write('Nhập số lượng que kem cần mua (>0): ');
@@ -38,7 +37,7 @@ void main() {
         print('=> Mua dưới 5 que nên không được giảm giá.');
       }
 
-      // 5. In kết quả (làm tròn số cho đẹp)
+      // 5. In kết quả 
       print('--- HÓA ĐƠN ---');
       print('Số lượng: $soLuong que');
       print('Đơn giá: ${donGia.toStringAsFixed(0)} đ');
