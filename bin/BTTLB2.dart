@@ -1,7 +1,6 @@
 import 'dart:io';
 
 void main() {
-  // --- BÀI TẬP 2: XỬ LÝ SỐ NGUYÊN ---
 
   int number = 0;
 
@@ -13,7 +12,7 @@ void main() {
     if (input != null && int.tryParse(input) != null) {
       number = int.parse(input);
       if (number > 10) {
-        break; // Số hợp lệ thì thoát khỏi vòng lặp nhập
+        break; 
       } else {
         print('Lỗi: Số nhập vào phải lớn hơn 10. Vui lòng nhập lại!');
       }
@@ -22,28 +21,20 @@ void main() {
     }
   }
 
-  // Chuyển số thành chuỗi để dễ xử lý từng ký tự
   String numberStr = number.toString();
 
-  // a. Cho biết số có bao nhiêu chữ số
   int soLuongChuSo = numberStr.length;
   print('a. Số $number có $soLuongChuSo chữ số.');
 
-  // b. Tính tổng các chữ số
   int tongCacChuSo = 0;
-  // c. Kiểm tra có chữ số lẻ hay không
   bool coSoLe = false;
-  List<String> danhSachSoLe = []; // Lưu lại để in ra cho đẹp (nếu muốn)
+  List<String> danhSachSoLe = []; 
 
-  // Duyệt qua từng ký tự trong chuỗi số
   for (int i = 0; i < numberStr.length; i++) {
-    // Lấy ký tự tại vị trí i và chuyển ngược lại thành số
     int digit = int.parse(numberStr[i]);
 
-    // Cộng vào tổng (Câu b)
     tongCacChuSo += digit;
 
-    // Kiểm tra lẻ (Câu c)
     if (digit % 2 != 0) {
       coSoLe = true;
       danhSachSoLe.add(digit.toString());
